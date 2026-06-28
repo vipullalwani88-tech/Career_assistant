@@ -5,11 +5,8 @@ from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnablePassthrough
 import os
-import zipfile
 
-if not os.path.exists("chroma_db") and os.path.exists("chroma_db.zip"):
-    with zipfile.ZipFile("chroma_db.zip", "r") as zip_ref:
-        zip_ref.extractall(".")
+# chroma_db folder is already in repo
 
 st.set_page_config(page_title="Career Assistant", page_icon="🤖")
 st.title("🤖 Personal Career Assistant")
